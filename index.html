@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body ng-controller="myController as ctrl" class="{{ctrl.bgHead}}">
+    <div class="header">
+        <h1 class="header_title">My Angular page</h1>
+        <span class="header_desc">You can cange style</span>
+        <div class="header_buttons">
+            <a href="#" class="btn"  ng-repeat="btn in ctrl.btns" ng-click='ctrl.addStyle($index)'>{{btn.name}}</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content_box {{ctrl.bgBlock}}">
+            <h2 class="content_box-title">Column1</h2>
+            <p class="content_box-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis optio esse inventore aspernatur, minima accusantium atque, ipsam sequi, hic ut vel ducimus. Porro assumenda distinctio nisi fuga, magni fugiat id.</p>
+        </div>
+        <div class="content_box {{ctrl.bgMainBlock}}">
+            <h2 class="content_box-title">Column2</h2>
+            <p class="content_box-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur rem, aperiam obcaecati excepturi expedita impedit dolorum veritatis asperiores odit itaque vero amet ipsam ipsum voluptatibus dolorem, nobis eius quisquam. Facere?</p>
+        </div>
+        <div class="content_box {{ctrl.bgBlock}}">
+            <h2 class="content_box-title">Column3</h2>
+            <p class="content_box-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias architecto totam molestiae qui a veniam tempore esse, non, mollitia ad dolorem odit exercitationem quod debitis aperiam temporibus repellat ipsa harum.</p>
+        </div>
+    </div>
+</body>
+</html>
