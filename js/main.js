@@ -31,4 +31,6 @@ app.controller('myController', function(){
         vm.bgBlock = vm.task[idx].aside
         vm.bgMainBlock = vm.task[idx].main
     }
+
+    
 })
